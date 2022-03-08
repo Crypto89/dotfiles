@@ -1,0 +1,11 @@
+Host *
+	ForwardAgent yes
+	AddKeysToAgent yes
+	UseKeychain yes
+	ControlMaster auto
+	ControlPath /tmp/socket-%r@%h-%p
+	ControlPersist 600
+	TCPKeepAlive yes
+
+Host 10.32.236.162
+	ProxyCommand ssh -W %h:%p 10.48.12.167

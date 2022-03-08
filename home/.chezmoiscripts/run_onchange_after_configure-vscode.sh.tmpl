@@ -1,0 +1,19 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+
+{{ $extensions := list
+     "bungcip.better-toml"
+     "eamodio.gitlens"
+     "EditorConfig.EditorConfig"
+     "golang.go"
+     "jinliming2.vscode-go-template"
+-}}
+
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ range $extensions -}}
+code --force --install-extension {{ . }}
+{{ end -}}
+
+{{ end -}}

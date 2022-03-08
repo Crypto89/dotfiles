@@ -1,0 +1,19 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tomasiser/vim-code-dark'
+Plugin 'cespare/vim-toml'
+
+call vundle#end()
+filetype plugin indent on
+
+set tabstop=4 shiftwidth=4 expandtab
+set backspace=indent,eol,start
+colorscheme codedark
+syntax on
+

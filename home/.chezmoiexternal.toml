@@ -1,0 +1,31 @@
+[".vim/bundle/Vundle.vim"]
+	type = "git-repo"
+	url = "https://github.com/VundleVim/Vundle.vim.git"
+
+[".oh-my-zsh"]
+    type = "git-repo"
+    url = "https://github.com/ohmyzsh/ohmyzsh/.git"
+    refreshPeriod = "168h"
+
+[".oh-my-zsh/custom/themes/powerlevel10k"]
+    type = "git-repo"
+    url = "https://github.com/romkatv/powerlevel10k.git"
+    refreshPeriod = "168h"
+
+{{- $fontDir := "Library/Fonts" }}
+["{{ $fontDir }}/MesloLGS NF Regular.ttf"]
+    type = "file"
+    url = "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Regular.ttf"
+    refreshPeriod = "168h"
+["{{ $fontDir }}/MesloLGS NF Bold.ttf"]
+    type = "file"
+    url = "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Bold.ttf"
+    refreshPeriod = "168h"
+["{{ $fontDir }}/MesloLGS NF Italic.ttf"]
+    type = "file"
+    url = "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Italic.ttf"
+    refreshPeriod = "168h"
+["{{ $fontDir }}/MesloLGS NF Bold Italic.ttf"]
+    type = "file"
+    url = "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Bold Italic.ttf"
+    refreshPeriod = "168h"

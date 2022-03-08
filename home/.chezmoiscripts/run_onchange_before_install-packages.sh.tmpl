@@ -1,0 +1,25 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $brews := list
+    "dockutil"
+    "go"
+    "lastpass-cli"
+    "mas"
+    "tfenv"
+-}}
+{{ $casks := list
+    "macvim"
+    "visual-studio-code" -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
+{{ end -}}
